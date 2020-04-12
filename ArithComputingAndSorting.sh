@@ -24,3 +24,6 @@ Dict[Compute2]=$arithCompute2
 Dict[Compute3]=$arithCompute3
 Dict[Compute4]=$arithCompute4
 echo "All Computation Result" ${Dict[@]}
+echo "Reading values from dict into array"
+Arr[Values]=${Dict[@]}
+echo ${Arr[@]}
