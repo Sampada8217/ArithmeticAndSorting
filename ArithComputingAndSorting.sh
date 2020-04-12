@@ -12,3 +12,5 @@ echo $arithCompute1
 arithCompute2=$(( $a * $b + $c ))
 echo $arithCompute2
 
+arithCompute3=$(( $c + $a / $b ))
+echo $arithCompute3
