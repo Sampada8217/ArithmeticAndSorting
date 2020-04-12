@@ -5,3 +5,6 @@ read b
 read c
 
 echo $a $b $c
+
+arithCompute1=$(( $a + $b * $c ))
+echo $arithCompute1
