@@ -56,3 +56,10 @@ do
 	echo ${Arr[$i]}
 done
 echo ${Arr[@]}
+
+echo -e "Sorted Results in Ascending Order"
+for (( i=3; i>=0; i-- ))
+do
+	echo ${Arr[$i]}
+done
+
