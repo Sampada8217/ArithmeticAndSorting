@@ -17,3 +17,10 @@ echo $arithCompute3
 
 arithCompute4=$(( $a % $b + $c ))
 echo $arithCompute4
+
+declare -A Dict
+Dict[Compute1]=$arithCompute1
+Dict[Compute2]=$arithCompute2
+Dict[Compute3]=$arithCompute3
+Dict[Compute4]=$arithCompute4
+echo "All Computation Result" ${Dict[@]}
