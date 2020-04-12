@@ -19,11 +19,40 @@ arithCompute4=$(( $a % $b + $c ))
 echo $arithCompute4
 
 declare -A Dict
-Dict[Compute1]=$arithCompute1
-Dict[Compute2]=$arithCompute2
-Dict[Compute3]=$arithCompute3
-Dict[Compute4]=$arithCompute4
+Dict[1]=$arithCompute1
+Dict[2]=$arithCompute2
+Dict[3]=$arithCompute3
+Dict[4]=$arithCompute4
+
 echo "All Computation Result" ${Dict[@]}
+
 echo "Reading values from dict into array"
-Arr[Values]=${Dict[@]}
+Arr[0]=${Dict[1]}
+Arr[1]=${Dict[2]}
+Arr[2]=${Dict[3]}
+Arr[3]=${Dict[4]}
+echo ${Arr[@]}
+echo "Original Array"
+for (( i=0; i<4; i++ ))
+do
+	echo ${Arr[$i]}
+done
+
+for (( i=0; i<4; i++ ))
+do
+	for (( j=$i; j<4; j++ ))
+	do
+		if [ ${Arr[$i]} -lt ${Arr[$j]} ];
+		then
+			temp=${Arr[$i]}
+			Arr[$i]=${Arr[$j]}
+			Arr[$j]=$temp
+		fi
+	done
+done
+echo -e "Sorted Results in Descending Order"
+for (( i=0; i<4; i++ ))
+do
+	echo ${Arr[$i]}
+done
 echo ${Arr[@]}
