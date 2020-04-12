@@ -8,3 +8,7 @@ echo $a $b $c
 
 arithCompute1=$(( $a + $b * $c ))
 echo $arithCompute1
+
+arithCompute2=$(( $a * $b + $c ))
+echo $arithCompute2
+
